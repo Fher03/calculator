@@ -6,10 +6,14 @@ const cButton = document.getElementById("c");
 
 let firstData = false;
 let secondData = false;
-let result;
+let result = 0;
 let firstNumber = "0";
 let secondNumber = "0";
 let currentOperator = null;
+
+window.addEventListener("DOMContentLoaded", () => {
+  displayData(result);
+});
 
 //Listen to numbers
 numbers.forEach((number) => {
@@ -76,6 +80,7 @@ operators.forEach((operator) => {
 //C Button press
 cButton.addEventListener("click", () => {
   resetValues();
+  displayData(result);
 });
 
 //Functions
